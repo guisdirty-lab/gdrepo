@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lowtowns Force Map</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Lowtowns Political Force Map</h1>
+    <div class="controls">
+      <label>
+        Search
+        <input id="search" type="search" placeholder="Node name…" />
+      </label>
+      <label>
+        Node type
+        <select id="typeFilter">
+          <option value="all">All</option>
+        </select>
+      </label>
+      <label>
+        Min link strength
+        <input id="minStrength" type="range" min="1" max="5" step="1" value="1" />
+        <span id="minStrengthValue">1</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section id="graphWrap">
+      <svg id="graph" aria-label="Force-directed political graph"></svg>
+    </section>
+
+    <aside id="details">
+      <h2>Node Details</h2>
+      <div id="detailsContent">Click a node to inspect details.</div>
+    </aside>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="graph.js"></script>
+</body>
+</html>
